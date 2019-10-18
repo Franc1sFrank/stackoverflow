@@ -17,6 +17,8 @@ NEWSPIDER_MODULE = 'stackoverflow.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'stackoverflow (+http://www.yourdomain.com)'
+USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/73.0.3683.86 Chrome/73.0.3683.86 Safari/537.36'
+
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -52,9 +54,9 @@ ROBOTSTXT_OBEY = True
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    'stackoverflow.middlewares.StackoverflowDownloaderMiddleware': 543,
-#}
+DOWNLOADER_MIDDLEWARES = {
+    'stackoverflow.middlewares.StackoverflowDownloaderMiddleware': 543,
+}
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
@@ -64,9 +66,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'stackoverflow.pipelines.StackoverflowPipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'stackoverflow.pipelines.StackoverflowPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
