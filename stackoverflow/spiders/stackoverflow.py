@@ -3,7 +3,7 @@ from stackoverflow.items import StackoverflowPythonItem
 
 class StackoverflowPythonSpider(scrapy.Spider):
 
-    name = "stackoverflow-python"
+    name = "stackoverflow"
 
     def start_requests(self):
         urls = []
